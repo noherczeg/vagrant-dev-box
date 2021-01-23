@@ -26,3 +26,8 @@ vagrant provision
 - IDEA Ultimate
 - OpenJDK 11: `v11.0.10+9`
 - Maven: `v3.6.3`
+
+## Forwarded ports (to host)
+- 8080
+- 8000
+- 3000
