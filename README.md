@@ -24,5 +24,5 @@ vagrant provision
 - Ansible
 - NVM: With Node `v14.15.4` installed by `default`
 - IDEA Ultimate
-- JDK: `v11.0.10+9`
+- OpenJDK 11: `v11.0.10+9`
 - Maven: `v3.6.3`
