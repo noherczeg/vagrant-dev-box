@@ -1,4 +1,5 @@
 {
     "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "files.eol": "\n"
 }
