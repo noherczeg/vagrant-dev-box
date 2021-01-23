@@ -1,7 +1,10 @@
 # Vagrant DEV Box
 
 ## Getting started
-- place `id_rsa` and `id_rsa.pub` files into the `provision/.ssh` folder
+
+### SSH Keys
+- Place `id_rsa` and `id_rsa.pub` files into the `provision/.ssh` folder.
+- Keys will be copied, and chowned + chmod-ed for the Box's user to prevent all possible issues which could occur if host is different platform.
 
 ## Run
 ```
