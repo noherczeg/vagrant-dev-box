@@ -67,6 +67,10 @@ Vagrant.configure("2") do |config|
     # Ansible
     sudo apt-add-repository --yes --update ppa:ansible/ansible
     sudo apt install -y ansible
+
+    # Chromium
+    sudo apt install -y chromium-browser
+
   SCRIPT
 
   $userScript = <<-SCRIPT
@@ -103,6 +107,7 @@ Vagrant.configure("2") do |config|
     rm -rf OpenJDK11U-jdk_x64_linux_hotspot_11.0.10_9.tar.gz
     echo "export JAVA_HOME=/home/vagrant/tools/jdk-11.0.10+9" >> /home/vagrant/.profile
     echo "export PATH=$PATH:/home/vagrant/tools/jdk-11.0.10+9/bin" >> /home/vagrant/.profile
+    source /home/vagrant/.profile
 
     # Maven
     cd /home/vagrant/tools
@@ -111,6 +116,11 @@ Vagrant.configure("2") do |config|
     tar -xzvf apache-maven-3.6.3-bin.tar.gz
     rm apache-maven-3.6.3-bin.tar.gz
     echo "export PATH=$PATH:/home/vagrant/tools/apache-maven-3.6.3/bin" >> /home/vagrant/.profile
+    source /home/vagrant/.profile
+
+    # Export CHROME_BIN
+    echo "export CHROME_BIN=/usr/bin/chromium-browser" >> /home/vagrant/.profile
+    source /home/vagrant/.profile
   SCRIPT
 
   config.vm.provision "shell", inline: $rootScript

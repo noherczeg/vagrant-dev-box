@@ -26,6 +26,7 @@ vagrant provision
 - IDEA Ultimate
 - OpenJDK 11: `v11.0.10+9`
 - Maven: `v3.6.3`
+- Chromium Browser: with env var `CHROME_BIN` exported for frontend testing frameworks
 
 ## Forwarded ports (to host)
 - 8080
